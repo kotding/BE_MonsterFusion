@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MonsterFusion_BE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+107667ca21e3f286e2efa37b6f8b8f8c268c0a0d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MonsterFusion_BE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MonsterFusion_BE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

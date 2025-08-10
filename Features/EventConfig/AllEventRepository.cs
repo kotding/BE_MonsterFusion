@@ -9,5 +9,15 @@ namespace MonsterFusion_BE.Features.EventConfig
         public AllEventRepository(DbContextOptions<AllEventRepository> options) : base(options) { }
         public DbSet<AviatorEventData> aviatorEventDatas { get; set; }
         public DbSet<ChristmasEventData> christmasEventDatas { get; set; }
+
+        public void SaveChanges()
+        {
+            base.SaveChanges();
+        }
+
+        public void SaveChangesAsync()
+        {
+            base.SaveChangesAsync();
+        }
     }
 }

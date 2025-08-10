@@ -158,3 +158,4 @@ C:\Users\ADMIN\source\repos\MonsterFusion_BE\MonsterFusion_BE\bin\Debug\net8.0\z
 C:\Users\ADMIN\source\repos\MonsterFusion_BE\MonsterFusion_BE\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\ADMIN\source\repos\MonsterFusion_BE\MonsterFusion_BE\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\ADMIN\source\repos\MonsterFusion_BE\MonsterFusion_BE\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\ADMIN\source\repos\MonsterFusion_BE\MonsterFusion_BE\obj\Debug\net8.0\MonsterFusion_BE.sourcelink.json

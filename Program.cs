@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MonsterFusion_BE;
 using MonsterFusion_BE.Features.EventConfig;
 using MonsterFusion_BE.Features.EventConfig.AviatorEvent.Service;
+using MonsterFusion_BE.Features.EventConfig.AviatorEvent.Service.BGService;
 using MonsterFusion_BE.Features.EventConfig.ChristmasEvent.Service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,9 @@ builder.Services.AddDbContext<AppDbContext>(option => option.UseNpgsql(connectSt
 builder.Services.AddDbContext<IAllEventRepository,AllEventRepository>(options => options.UseNpgsql(connectString));
 builder.Services.AddScoped<AviatorEventService>();
 builder.Services.AddScoped<ChristmasEventService>();
+builder.Services.AddScoped<IServiceProvider, ServiceProvider>();
+
+builder.Services.AddHostedService<ResetAviatorService>();
 
 var app = builder.Build();
 

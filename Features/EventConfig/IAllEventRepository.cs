@@ -8,5 +8,8 @@ namespace MonsterFusion_BE.Features.EventConfig
     {
         public DbSet<AviatorEventData> aviatorEventDatas { get; set; }
         public DbSet<ChristmasEventData> christmasEventDatas { get; set; }
+
+        public void SaveChanges();
+        public void SaveChangesAsync();
     }
 }
