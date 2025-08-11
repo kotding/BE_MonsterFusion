@@ -14,7 +14,7 @@ namespace MonsterFusion_BE.Features.EventConfig.AviatorEvent.Service
                 Console.WriteLine("Aviator event data from cache");
                 return Task.FromResult<IEventDataResponse>(dataCache);
             }
-            AviatorEventData data = allEventRepository.aviatorEventDatas.First();
+            AviatorEventData? data = allEventRepository.aviatorEventDatas.FirstOrDefault();
             if(data == null)
             {
                 Console.WriteLine("Aviator event data not found");

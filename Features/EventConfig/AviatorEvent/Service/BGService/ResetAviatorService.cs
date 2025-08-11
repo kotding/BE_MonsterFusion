@@ -12,17 +12,17 @@ namespace MonsterFusion_BE.Features.EventConfig.AviatorEvent.Service.BGService
         {
             while(!stoppingToken.IsCancellationRequested)
             {
-                await Task.Delay(20 * 1000);
-                using(var scrope = scropeFactory.CreateScope())
+                await Task.Delay(20 * 1000 , stoppingToken);
+                using(var scope = scropeFactory.CreateScope())
                 {
-                    var allEventRepository = scrope.ServiceProvider.GetService<IAllEventRepository>();
+                    var allEventRepository = scope.ServiceProvider.GetService<IAllEventRepository>();
                     if(allEventRepository != null)
                     {
-                        var data = allEventRepository.aviatorEventDatas.First();
+                        var data = allEventRepository.aviatorEventDatas.FirstOrDefault();
                         if (data != null)
                         {
                             data.time_expired += TimeSpan.FromSeconds(60);
-                            allEventRepository.SaveChangesAsync();
+                            await allEventRepository.SaveChangesAsync(stoppingToken);
                             Console.WriteLine("Reset time expired aviator");
                         }
                     }

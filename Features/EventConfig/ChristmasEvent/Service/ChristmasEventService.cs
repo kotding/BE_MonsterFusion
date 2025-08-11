@@ -14,7 +14,7 @@ namespace MonsterFusion_BE.Features.EventConfig.ChristmasEvent.Service
                 Console.WriteLine("Christmas event data from query");
                 return Task.FromResult<IEventDataResponse>(cacheData);
             }
-            var data = allEventRepository.christmasEventDatas.First();
+            var data = allEventRepository.christmasEventDatas.FirstOrDefault();
             if(data == null)
             {
                 return Task.FromResult<IEventDataResponse>(null);

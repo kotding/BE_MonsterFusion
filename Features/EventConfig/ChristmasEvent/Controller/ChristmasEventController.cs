@@ -14,7 +14,6 @@ namespace MonsterFusion_BE.Features.EventConfig.ChristmasEvent.Controller
             this.service = service;
         }
         [HttpGet("")]
-        [ResponseCache(Duration = 10)]
         public async Task<IActionResult> GetEventConfig()
         {
             var data = await service.GetEventConfigAsync();

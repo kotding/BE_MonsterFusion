@@ -4,20 +4,20 @@ using MonsterFusion_BE.Features.EventConfig.ChristmasEvent.Entity;
 
 namespace MonsterFusion_BE.Features.EventConfig
 {
-    public class AllEventRepository : DbContext , IAllEventRepository
+    public class AllEventRepository : DbContext, IAllEventRepository
     {
         public AllEventRepository(DbContextOptions<AllEventRepository> options) : base(options) { }
         public DbSet<AviatorEventData> aviatorEventDatas { get; set; }
         public DbSet<ChristmasEventData> christmasEventDatas { get; set; }
 
-        public void SaveChanges()
+        public new int SaveChanges()
         {
-            base.SaveChanges();
+            return base.SaveChanges();
         }
 
-        public void SaveChangesAsync()
+        public new Task<int> SaveChangesAsync(CancellationToken cancellationToken)
         {
-            base.SaveChangesAsync();
+            return base.SaveChangesAsync(cancellationToken);
         }
     }
 }
